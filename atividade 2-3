@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    float temperatura;
+    printf("Digite a temperatura em Celsius: ");
+    scanf("%f", &temperatura);
+
+    if (temperatura > 30) {
+        printf("A temperatura é quente.\n");
+    } else {
+        printf("A temperatura é fria.\n");
+    }
+
+    return 0;
+}
