@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    float velocidade;
+    printf("Digite a velocidade do veículo (em km/h): ");
+    scanf("%f", &velocidade);
+
+    if (velocidade < 30) {
+        printf("Velocidade baixa\n");
+    } else if (velocidade <= 60) {
+        printf("Velocidade média\n");
+    } else {
+        printf("Velocidade alta\n");
+    }
+
+    return 0;
+}
