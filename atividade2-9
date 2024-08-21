@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    int nota;
+    printf("Digite a nota do aluno (0 a 100): ");
+    scanf("%d", &nota);
+
+    if (nota >= 80) {
+        printf("Excelente\n");
+    } else if (nota >= 60) {
+        printf("Bom\n");
+    } else if (nota >= 40) {
+        printf("Suficiente\n");
+    } else {
+        printf("Insuficiente\n");
+    }
+
+    return 0;
+}
