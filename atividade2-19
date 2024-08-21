@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    int numero, mais_proximo;
+
+    printf("Digite um número inteiro: ");
+    scanf("%d", &numero);
+
+    if (abs(numero - 1000) <= abs(numero - 100) && abs(numero - 1000) <= abs(numero - 10)) {
+        mais_proximo = 1000;
+    } else if (abs(numero - 100) <= abs(numero - 10)) {
+        mais_proximo = 100;
+    } else {
+        mais_proximo = 10;
+    }
+
+    printf("O número está mais próximo de %d\n", mais_proximo);
+    return 0;
+}
