@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int horas;
+    float custo_total = 0;
+
+    printf("Digite o número total de horas estacionadas: ");
+    scanf("%d", &horas);
+
+    if (horas <= 2) {
+        custo_total = horas * 5.0;
+    } else if (horas <= 5) {
+        custo_total = 2 * 5.0 + (horas - 2) * 3.0;
+    } else {
+        custo_total = 2 * 5.0 + 3 * 3.0 + (horas - 5) * 2.0;
+    }
+
+    printf("Custo total: R$ %.2f\n", custo_total);
+    return 0;
+}
