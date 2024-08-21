@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int nivel;
+    printf("Digite o nível de água (em %): ");
+    scanf("%d", &nivel);
+
+    if (nivel < 30) {
+        printf("Nível baixo.\n");
+    } else if (nivel <= 70) {
+        printf("Nível médio.\n");
+    } else {
+        printf("Nível alto.\n");
+    }
+
+    return 0;
+}
