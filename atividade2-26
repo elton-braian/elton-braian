@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    int tipo_evento, assentos_desejados;
+    int capacidade;
+
+    printf("Escolha o tipo de evento (1-Concerto, 2-Teatro, 3-Evento Esportivo, 4-Conferência): ");
+    scanf("%d", &tipo_evento);
+
+    switch (tipo_evento) {
+        case 1: capacidade = 500; break;
+        case 2: capacidade = 200; break;
+        case 3: capacidade = 1000; break;
+        case 4: capacidade = 300; break;
+        default:
+            printf("Tipo de evento inválido.\n");
+            return 1;
+    }
+
+    printf("Digite o número de assentos desejados: ");
+    scanf("%d", &assentos_desejados);
+
+    if (assentos_desejados <= capacidade) {
+        printf("Reserva confirmada! %d assentos reservados.\n", assentos_desejados);
+    } else {
+        printf("Não há assentos suficientes disponíveis.\n");
+    }
+
+    return 0;
+}
