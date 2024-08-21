@@ -1,0 +1,49 @@
+#include <stdio.h>
+
+int main() {
+    int tipo_produto, quantidade;
+    float preco_unitario, preco_total, desconto;
+
+    printf("Digite o código do tipo de produto (1-5): ");
+    scanf("%d", &tipo_produto);
+    printf("Digite a quantidade comprada: ");
+    scanf("%d", &quantidade);
+
+    switch(tipo_produto) {
+        case 1:
+            preco_unitario = 150.0;
+            break;
+        case 2:
+            preco_unitario = 50.0;
+            break;
+        case 3:
+            preco_unitario = 80.0;
+            break;
+        case 4:
+            preco_unitario = 120.0;
+            break;
+        case 5:
+            preco_unitario = 90.0;
+            break;
+        default:
+            printf("Tipo de produto inválido.\n");
+            return 1;
+    }
+
+    preco_total = preco_unitario * quantidade;
+
+    if (quantidade >= 1 && quantidade <= 5) {
+        desconto = 0.05;
+    } else if (quantidade >= 6 && quantidade <= 10) {
+        desconto = 0.10;
+    } else if (quantidade > 10) {
+        desconto = 0.15;
+    } else {
+        desconto = 0;
+    }
+
+    preco_total = preco_total * (1 - desconto);
+    printf("Preço final com desconto: R$ %.2f\n", preco_total);
+
+    return 0;
+}
