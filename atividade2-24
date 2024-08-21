@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    int temperatura;
+    char clima[20];
+
+    printf("Digite o tipo de clima (ensolarado, nublado, chuvoso): ");
+    scanf("%s", clima);
+    printf("Digite a temperatura atual em graus Celsius: ");
+    scanf("%d", &temperatura);
+
+    if (strcmp(clima, "ensolarado") == 0) {
+        if (temperatura > 25) {
+            printf("Sugestão: ir à praia ou fazer um piquenique.\n");
+        } else if (temperatura >= 15) {
+            printf("Sugestão: caminhadas ou passeios de bicicleta.\n");
+        } else {
+            printf("Sugestão: fotografia da natureza ou observação de pássaros.\n");
+        }
+    } else if (strcmp(clima, "nublado") == 0) {
+        if (temperatura > 20) {
+            printf("Sugestão: visitar museus ou fazer compras.\n");
+        } else if (temperatura >= 10) {
+            printf("Sugestão: passeios culturais.\n");
+        } else {
+            printf("Sugestão: leitura em bibliotecas ou sessões de cinema.\n");
+        }
+    } else if (strcmp(clima, "chuvoso") == 0) {
+        if (temperatura > 15) {
+            printf("Sugestão: visitar um spa ou fazer aulas de culinária.\n");
+        } else if (temperatura >= 5) {
+            printf("Sugestão: museus de ciência ou sessões de boliche.\n");
+        } else {
+            printf("Sugestão: jogos de tabuleiro ou maratona de filmes.\n");
+        }
+    } else {
+        printf("Tipo de clima inválido.\n");
+    }
+
+    return 0;
+}
