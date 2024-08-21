@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int main() {
+    int horario, nivel_trafego;
+    int tempo_verde, tempo_amarelo, tempo_vermelho;
+
+    printf("Digite o horário (1 = manhã, 2 = tarde, 3 = noite): ");
+    scanf("%d", &horario);
+    printf("Digite o nível de tráfego (1 = baixo, 2 = médio, 3 = alto): ");
+    scanf("%d", &nivel_trafego);
+
+    switch (nivel_trafego) {
+        case 1:
+            tempo_verde = 10;
+            tempo_amarelo = 5;
+            tempo_vermelho = 30;
+            break;
+        case 2:
+            tempo_verde = 20;
+            tempo_amarelo = 5;
+            tempo_vermelho = 20;
+            break;
+        case 3:
+            tempo_verde = 30;
+            tempo_amarelo = 5;
+            tempo_vermelho = 10;
+            break;
+        default:
+            printf("Nível de tráfego inválido.\n");
+            return 1;
+    }
+
+    printf("Verde: %d segundos\n", tempo_verde);
+    printf("Amarelo: %d segundos\n", tempo_amarelo);
+    printf("Vermelho: %d segundos\n", tempo_vermelho);
+
+    return 0;
+}
