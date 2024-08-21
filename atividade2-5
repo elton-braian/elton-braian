@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    int numero;
+    printf("Digite um número inteiro: ");
+    scanf("%d", &numero);
+
+    if (numero % 5 == 0) {
+        printf("O número é múltiplo de cinco.\n");
+    } else {
+        printf("O número não é múltiplo de cinco.\n");
+    }
+
+    return 0;
+}
